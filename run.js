@@ -1,5 +1,7 @@
 const path = require('path');
 
+const version = '3.5.4';
+
 module.exports = () =>
 {
 	const config =
@@ -25,7 +27,7 @@ module.exports = () =>
 				method: 'shell.run',
 				params:
 				{
-					message: 'git checkout --quiet 3.5.4',
+					message: 'git checkout --quiet ' + version,
 					path: 'facefusion'
 				}
 			},
