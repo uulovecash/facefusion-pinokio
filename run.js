@@ -18,14 +18,14 @@ module.exports = () =>
 				method: 'local.set',
 				params:
 				{
-					mode: '{{ input.mode }}'
+					mode: '{{ input.mode || "Default" }}'
 				}
 			},
 			{
 				method: 'shell.run',
 				params:
 				{
-					message: 'git checkout --quiet -- facefusion',
+					message: 'git checkout --quiet 3.5.4',
 					path: 'facefusion'
 				}
 			},
@@ -33,7 +33,7 @@ module.exports = () =>
 				method: 'shell.run',
 				params:
 				{
-					message: '{{ self.cmd[local.mode] }}',
+					message: '{{ self.cmd[local.mode] || self.cmd.Default }}',
 					path: 'facefusion',
 					conda:
 					{
