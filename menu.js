@@ -22,9 +22,9 @@ module.exports = async (kernel, info) =>
 	if (!info.running('run.js') && !info.running('install.js') && !info.running('update.js') && !info.running('reset.js'))
 	{
 		[
-			[ 'fa-solid fa-power-off', 'Run Default', 'Default' ],
-			[ 'fa-solid fa-robot', 'Run Default+Jobs', 'Default+Jobs' ],
-			[ 'fa-solid fa-gauge', 'Run Benchmark', 'Benchmark' ],
+			[ 'fa-solid fa-power-off', 'Run Single Video', 'Default' ],
+			[ 'fa-solid fa-robot', 'Run Queue Mode', 'Default+Jobs' ],
+			[ 'fa-solid fa-gauge', 'Run Fast Mode', 'Benchmark' ],
 			[ 'fa-solid fa-camera', 'Run Webcam', 'Webcam' ]
 		]
 		.forEach(([ icon, text, mode ]) =>
