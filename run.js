@@ -11,7 +11,8 @@ module.exports = () =>
 		{
 			'Default': 'python facefusion.py run',
 			'Default+Jobs': 'python facefusion.py run --ui-layouts default jobs',
-			'Benchmark': 'python facefusion.py run --ui-layouts benchmark',
+			'Performance': 'python facefusion.py run --execution-thread-count 8 --video-memory-strategy tolerant',
+			'Benchmark': 'python facefusion.py run --ui-layouts benchmark --execution-thread-count 8 --video-memory-strategy tolerant',
 			'Webcam': 'python facefusion.py run --ui-layouts webcam'
 		},
 		run:
