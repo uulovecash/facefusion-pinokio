@@ -12,6 +12,10 @@
 	},
 	"scripts": {
 		"lint": "eslint .",
-		"fix": "npm run lint -- --fix"
+		"fix": "npm run lint -- --fix",
+		"agent": "node run-agent.mjs",
+		"agent:review": "node run-agent.mjs -m composer-2 \"Review the last commit for code quality and bugs\"",
+		"agent:test": "node run-agent.mjs -m composer-2 \"Run the test suite and summarize any failures\"",
+		"agent:fix": "node run-agent.mjs -m composer-2 \"Auto-fix lint errors and show a summary of changes\""
 	}
 }
